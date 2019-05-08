@@ -34,7 +34,7 @@ chars = ("\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x10\x
 bad_char = ("")
 
 #buffer += chars
-#buffer += "B"*4
+#buffer += "TESTSTRING"*4
 
 
 
@@ -56,6 +56,7 @@ shellcode = ()
 #not a bad idea to make it the same size as the unpacked code too
 #add esp, -1650 was good in this instance
 # DO NOT FLIP THIS ADDRESS!
+#If you get stackoverflow errors, take the space out and put a bunch of \x90 or TESTSTRINGS in to pad.
 space = ("")
 #buffer += space
 
