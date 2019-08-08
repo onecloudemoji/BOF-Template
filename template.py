@@ -52,7 +52,7 @@ esp_jmp = ("")
 shellcode = ()
 
 
-#step 8, generate space with metasm that is a little biggrt than the unpacked space of your shell code.
+#step 8, generate space with metasm_shell that is a little biggrt than the unpacked space of your shell code.
 #not a bad idea to make it the same size as the unpacked code too
 #add esp, -1650 was good in this instance
 # DO NOT FLIP THIS ADDRESS!
